@@ -52,7 +52,17 @@ res.status(200).json({
     success:"Transaction Successful"
 })
 
-    
+router.post("/balance",middleware,async function(req,res){
+    const UserId=req.userId;
+    const account=await Account.findOne({userId:userId});
+    if(!account){
+        return res.json({msg:"Transaction failed"})
+    }
+    res.json({
+        msg: account.balance
+    })
+
+})    
 
 
     
