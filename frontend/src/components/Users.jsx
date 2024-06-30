@@ -16,8 +16,7 @@ export const Users = () => {
         })
         
     },[filter])
-    console.log(users)
-
+  
     return <>
         <div className="font-bold mt-6 text-lg">
             Users
